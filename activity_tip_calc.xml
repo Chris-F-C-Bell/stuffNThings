@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D3D3D3"
+    android:fillViewport="true"
+    tools:context="com.example.christopher.tipcalc.tipCalc"
+    tools:layout_editor_absoluteX="match_parent"
+    tools:layout_editor_absoluteY="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <TextView
+            android:id="@+id/billAmountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/bill_text_view" />
+
+        <EditText
+            android:id="@+id/billEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/billAmountTextView"
+            android:layout_toRightOf="@+id/billAmountTextView"
+            android:ems="5"
+            android:inputType="numberDecimal"
+            android:text="@string/bill_edit_text" />
+
+        <TextView
+            android:id="@+id/tipTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/billAmountTextView"
+            android:layout_marginLeft="13dp"
+            android:layout_marginStart="13dp"
+            android:layout_toEndOf="@+id/billEditText"
+            android:layout_toRightOf="@+id/billEditText"
+            android:text="@string/tip_text_view" />
+
+        <EditText
+            android:id="@+id/tipEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/billEditText"
+            android:layout_marginLeft="11dp"
+            android:layout_marginStart="11dp"
+            android:layout_toEndOf="@+id/tipTextView"
+            android:layout_toRightOf="@+id/tipTextView"
+            android:ems="3"
+            android:inputType="numberDecimal"
+            android:text="@string/tip_edit_text" />
+
+        <TextView
+            android:id="@+id/changeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/billAmountTextView"
+            android:layout_alignStart="@+id/billAmountTextView"
+            android:layout_below="@+id/billEditText"
+            android:layout_marginTop="10dp"
+            android:text="@string/change_tip_text_view" />
+
+        <SeekBar
+            android:id="@+id/changeTipSeekBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/tipEditText"
+            android:layout_alignLeft="@+id/changeTextView"
+            android:layout_alignRight="@+id/tipEditText"
+            android:layout_alignStart="@+id/changeTextView"
+            android:layout_below="@+id/changeTextView"
+            android:progress="15" />
+
+        <TextView
+            android:id="@+id/arrivalTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/changeTipSeekBar"
+            android:layout_alignStart="@+id/changeTipSeekBar"
+            android:layout_below="@+id/changeTipSeekBar"
+            android:layout_marginTop="10dp"
+            android:text="@string/arrival_text_view" />
+
+        <CheckBox
+            android:id="@+id/friendlyCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/arrivalTextView"
+            android:layout_alignStart="@+id/arrivalTextView"
+            android:layout_below="@+id/arrivalTextView"
+            android:layout_marginTop="10dp"
+            android:text="@string/friendly_text_view" />
+
+        <CheckBox
+            android:id="@+id/specialsCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/friendlyCheckBox"
+            android:layout_alignBottom="@+id/friendlyCheckBox"
+            android:layout_toEndOf="@+id/friendlyCheckBox"
+            android:layout_toRightOf="@+id/friendlyCheckBox"
+            android:text="@string/specials_text_view" />
+
+        <CheckBox
+            android:id="@+id/drinksCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/specialsCheckBox"
+            android:layout_toEndOf="@+id/specialsCheckBox"
+            android:layout_toRightOf="@+id/specialsCheckBox"
+            android:text="@string/drinks_text_view" />
+
+        <TextView
+            android:id="@+id/availableTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/friendlyCheckBox"
+            android:layout_alignStart="@+id/friendlyCheckBox"
+            android:layout_below="@+id/friendlyCheckBox"
+            android:layout_marginTop="10dp"
+            android:text="@string/available_text_view" />
+
+        <RadioGroup
+            android:id="@+id/availableRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/availableTextView"
+            android:layout_alignStart="@+id/availableTextView"
+            android:layout_below="@+id/availableTextView"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/availableBadRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/available_bad_radiobutton"
+                tools:text="@string/available_bad_radiobutton" />
+
+            <RadioButton
+                android:id="@+id/availableOKRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/availableTextView"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@+id/availableRadioGroup"
+                android:layout_toRightOf="@+id/availableRadioGroup"
+                android:text="@string/available_ok_radiobutton" />
+
+            <RadioButton
+                android:id="@+id/availableGoodRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/availableOKRadio"
+                android:layout_alignBottom="@+id/availableOKRadio"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@+id/availableOKRadio"
+                android:layout_toRightOf="@+id/availableOKRadio"
+                android:text="@string/available_good_radiobutton" />
+
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/foodQualityTextField"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/availableRadioGroup"
+            android:layout_alignStart="@+id/availableRadioGroup"
+            android:layout_below="@+id/availableRadioGroup"
+            android:layout_marginTop="10dp"
+            android:text="@string/food_quality_text_view" />
+
+        <Spinner
+            android:id="@+id/foodQualitySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/drinksCheckBox"
+            android:layout_alignLeft="@+id/foodQualityTextField"
+            android:layout_alignRight="@+id/drinksCheckBox"
+            android:layout_alignStart="@+id/foodQualityTextField"
+            android:layout_below="@+id/foodQualityTextField"
+            android:layout_marginTop="10dp"
+            android:entries="@array/food_quality" />
+
+        <TextView
+            android:id="@+id/finalTipAmountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/foodQualityTextField"
+            android:layout_alignStart="@+id/foodQualityTextField"
+            android:layout_below="@+id/foodQualitySpinner"
+            android:layout_marginTop="20dp"
+            android:text="@string/final_tip_text_view" />
+
+        <TextView
+            android:id="@+id/finalTipTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/finalTipAmountTextView"
+            android:layout_alignBottom="@+id/finalTipAmountTextView"
+            android:layout_alignEnd="@+id/availableTextView"
+            android:layout_alignRight="@+id/availableTextView"
+            android:text="@string/final_tip_update_text_view" />
+
+        <TextView
+            android:id="@+id/finalBillTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/finalTipAmountTextView"
+            android:layout_alignStart="@+id/finalTipAmountTextView"
+            android:layout_below="@+id/finalTipAmountTextView"
+            android:layout_marginTop="10dp"
+            android:text="@string/final_text_view" />
+
+        <TextView
+            android:id="@+id/finalBillUpdateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/finalTipTextView"
+            android:layout_alignStart="@+id/finalTipTextView"
+            android:layout_alignTop="@+id/finalBillTextView"
+            android:text="@string/final_bill_update_text_view" />
+
+        <Button
+            android:id="@+id/splitBillButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/finalBillTextView"
+            android:layout_marginTop="20dp"
+            android:layout_toLeftOf="@+id/specialsCheckBox"
+            android:layout_toStartOf="@+id/specialsCheckBox"
+            android:onClick="sendMessage"
+            android:text="@string/split_bill_button" />
+
+    </RelativeLayout>
+</ScrollView>

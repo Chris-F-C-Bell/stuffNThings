@@ -1,0 +1,54 @@
+<resources>
+
+    // Tip Calculator Activity
+    <string name="app_name">Tip Calculator</string>
+
+    <string name="bill_text_view">Bill Amount:</string>
+    <string name="bill_edit_text">0.00</string>
+
+    <string name="tip_text_view">Tip (%):</string>
+    <string name="tip_edit_text">0.15</string>
+
+    <string name="final_text_view">Final Bill:</string>
+    <string name="final_bill_edit_text">0.0</string>
+
+    <string name="change_tip_text_view">Set Tip:</string>
+
+    <string name="arrival_text_view">Server Checklist</string>
+
+    <string name="friendly_text_view">Friendly</string>
+    <string name="specials_text_view">Soup/Specials</string>
+    <string name="drinks_text_view">Drink Order Taken</string>
+
+    <string name="available_text_view">Server Availability</string>
+    <string name="available_bad_radiobutton">Bad</string>
+    <string name="available_ok_radiobutton">OK</string>
+    <string name="available_good_radiobutton">Good</string>
+
+    <string name="food_quality_text_view">Food Quality</string>
+    <string-array name="food_quality">
+        <item>--Food Quality--</item>
+        <item>Bad</item>
+        <item>OK</item>
+        <item>Good</item>
+    </string-array>
+
+    <string name="final_tip_text_view">Final Tip:</string>
+    <string name="final_tip_update_text_view">0.0</string>
+
+    <string name="final_bill_update_text_view">0.0</string>
+
+    <string name="split_bill_button">Split Bill</string>
+
+    // Split Bill Activity
+
+    <string name="split_bill_text_view">Split Bill</string>
+    <string name="number_diners_text_view">Number of Diners:</string>
+    <string name="number_diners_edit_text">1</string>
+    <string name="bill_per_person_text_view">Bill per Person:</string>
+    <string name="final_bill_per_person_text_view">0.0</string>
+
+    <string name="tip_calc_button">Tip Calculator</string>
+
+
+</resources>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D3D3D3"
+    tools:context="com.example.christopher.tipcalc.splitBill"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/billAmountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/bill_text_view" />
+
+        <TextView
+            android:id="@+id/finalBillTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/billAmountTextView"
+            android:layout_marginLeft="13dp"
+            android:layout_marginStart="13dp"
+            android:layout_toEndOf="@+id/billAmountTextView"
+            android:layout_toRightOf="@+id/billAmountTextView"
+            android:text="@string/final_bill_update_text_view" />
+
+        <TextView
+            android:id="@+id/numDinerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/billAmountTextView"
+            android:layout_alignStart="@+id/billAmountTextView"
+            android:layout_below="@+id/billAmountTextView"
+            android:layout_marginTop="14dp"
+            android:text="@string/number_diners_text_view" />
+
+        <EditText
+            android:id="@+id/numDinersEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/numDinerTextView"
+            android:layout_alignBottom="@+id/numDinerTextView"
+            android:layout_toEndOf="@+id/numDinerTextView"
+            android:layout_toRightOf="@+id/numDinerTextView"
+            android:ems="3"
+            android:inputType="number"
+            android:text="@string/number_diners_edit_text" />
+
+        <TextView
+            android:id="@+id/billPersonTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/numDinerTextView"
+            android:layout_alignStart="@+id/numDinerTextView"
+            android:layout_below="@+id/numDinersEditText"
+            android:layout_marginTop="14dp"
+            android:text="@string/bill_per_person_text_view" />
+
+        <TextView
+            android:id="@+id/billPerPersonTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/billPersonTextView"
+            android:layout_alignBottom="@+id/billPersonTextView"
+            android:layout_toEndOf="@+id/finalBillTextView"
+            android:layout_toRightOf="@+id/finalBillTextView"
+            android:text="@string/final_bill_per_person_text_view" />
+
+
+    </RelativeLayout>
+
+</ScrollView>
